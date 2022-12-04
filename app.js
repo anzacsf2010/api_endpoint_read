@@ -1,5 +1,4 @@
 const https = require("https")
-const child_process = require("child_process");
 
 const givenUrl = "https://swapi.dev/api/people/1";
 const testUrl = "https://randomuser.me/api/";
