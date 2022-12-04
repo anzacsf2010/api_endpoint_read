@@ -1,7 +1,7 @@
 const https = require("https")
 
 const givenUrl = "https://swapi.dev/api/people/1";
-const testUrl = "https://randomuser.me/api/";
+// const testUrl = "https://randomuser.me/api/";
 
 const getNames = (url) => {
 
@@ -14,7 +14,7 @@ const getNames = (url) => {
             });
 
             response.on('end', () => {
-                name = JSON.parse(data).results[0].name;
+                name = JSON.parse(data).name;
                 resolve(name);
             });
         }).on('error', (err) => {
@@ -27,4 +27,4 @@ const getNames = (url) => {
 ( async (url) => {
     let buffer = await getNames(url);
     console.log(buffer);
-})(testUrl);
+})(givenUrl);
