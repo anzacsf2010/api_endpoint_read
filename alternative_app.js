@@ -1,4 +1,4 @@
-const axios = require("axios");
+const axios = require('axios');
 
 const altGetNames = (url) => {
     return axios.get(url)

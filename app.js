@@ -1,7 +1,7 @@
 // ====================
 // Most elegant method
 // ====================
-const https = require("https")
+const https = require('https')
 
 const givenUrl = "https://swapi.dev/api/people/1";
 
@@ -35,7 +35,7 @@ const getNames = (url) => {
 // ===================
 // Alternative method
 // ===================
-const {altGetNames} = require("./alternative_app");
+const {altGetNames} = require('./alternative_app');
 
 ( async (url) => {
     let buffer = await altGetNames(url);
