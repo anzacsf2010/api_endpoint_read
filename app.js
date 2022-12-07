@@ -1,7 +1,9 @@
+// ===================
+// Most elegant method
+// ===================
 const https = require("https")
 
 const givenUrl = "https://swapi.dev/api/people/1";
-// const testUrl = "https://randomuser.me/api/";
 
 const getNames = (url) => {
 
@@ -26,5 +28,15 @@ const getNames = (url) => {
 
 ( async (url) => {
     let buffer = await getNames(url);
+    console.log(buffer);
+})(givenUrl);
+
+// ===================
+// Alternative method
+// ===================
+const {altGetNames} = require("./alternative_app");
+
+( async (url) => {
+    let buffer = await altGetNames(url);
     console.log(buffer);
 })(givenUrl);
