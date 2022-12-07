@@ -1,6 +1,6 @@
-// ===================
+// ====================
 // Most elegant method
-// ===================
+// ====================
 const https = require("https")
 
 const givenUrl = "https://swapi.dev/api/people/1";
@@ -16,7 +16,7 @@ const getNames = (url) => {
             });
 
             response.on('end', () => {
-                name = JSON.parse(data).name;
+                name = "Most Elegant Method - Name: " + JSON.parse(data).name;
                 resolve(name);
             });
         }).on('error', (err) => {
@@ -30,6 +30,7 @@ const getNames = (url) => {
     let buffer = await getNames(url);
     console.log(buffer);
 })(givenUrl);
+
 
 // ===================
 // Alternative method
